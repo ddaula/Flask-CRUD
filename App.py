@@ -56,5 +56,9 @@ def delete(id_data):
             flash("Data Updated Successfully")
             return redirect(url_for('index'))
 
+@app.route('/signon')
+def signon():
+    return render_template('signon.html')
+
 if __name__ == "__main__":
     app.run(port=5006,debug=True)
