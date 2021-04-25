@@ -96,30 +96,32 @@
              <td>{{row.2}}</td>
              <td>{{row.3}}</td>
              <td>{{row.4}}</td>
-             <td> <a href="/update/{{row.0}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.0}}">Edit</a>
+             <td>
+                  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Expand</a>
+                  <a href="/update/{{row.0}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.0}}">Edit</a>
                   <a href="/delete/{{ row.0 }}" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure to delete?')">Delete</a>
              </td>
           </tr>
-          <tr>
+          <tr class="collapse" id="collapseExample">
             <th colspan="1"></th>
             <th colspan="2">
               <h4>Select Source</h4>
               <form>
-              <input type="radio" id="Database" name="Source" value="Database">
+              <input name="collapseGroup" type="radio" data-toggle="collapse" data-target="#collapseSourceDB" id="Database" name="Source" value="Database">
               <label for="male">Database</label><br>
-              <input type="radio" id="Flat File" name="Source" value="Flat File">
+              <input name="collapseGroup" type="radio" data-toggle="collapse" data-target="#collapseSourceFF" id="Flat File" name="Source" value="Flat File">
               <label for="female">Flat File</label><br>
             </form> </th>
             <th colspan="2">
               <h4>Select Target</h4>
               <form>
-              <input type="radio" id="Database" name="Target" value="Database">
+              <input name="collapseGroup" type="radio" data-toggle="collapse" data-target="#collapseTargetDB" type="radio" id="Database" name="Target" value="Database">
               <label for="male">Database</label><br>
-              <input type="radio" id="Flat File" name="Target" value="Flat File">
+              <input name="collapseGroup" type="radio" data-toggle="collapse" data-target="#collapseTargetFF" type="radio" id="Flat File" name="Target" value="Flat File">
               <label for="female">Flat File</label><br>
             </form> </th>
           </tr>
-          <tr>
+          <tr id="collapseSourceDB" class="panel-collapse collapse">
             <th colspan="1"></th>
             <th colspan="2">
               <div class="form-group">
@@ -140,7 +142,7 @@
                 </div>
             </th>
           </tr>
-          <tr>
+          <tr id="collapseTargetDB" class="panel-collapse collapse">
             <th colspan="1"></th>
             <th colspan="2">
               <div class="form-group">
@@ -160,6 +162,22 @@
                 <input type="text" class="form-control" name="Password" required="1" maxlength="50" size="4">
                 </div>
             </th>
+          </tr>
+          <tr id="collapseSourceFF" class="panel-collapse collapse">
+            <th colspan="1"></th>
+            <th colspan="2">
+              <div class="form-group">
+                <label>Target Flat File</label>
+                <input type="text" class="form-control" name="Source Flat File" required="1" maxlength="50" size="4">
+                </div>
+          </tr>
+          <tr id="collapseTargetFF" class="panel-collapse collapse">
+            <th colspan="1"></th>
+            <th colspan="2">
+              <div class="form-group">
+                <label>Target Flat File</label>
+                <input type="text" class="form-control" name="Target Flat File" required="1" maxlength="50" size="4">
+                </div>
           </tr>
           <tr>
             <th colspan="1"></th>
