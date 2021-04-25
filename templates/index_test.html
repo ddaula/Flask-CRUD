@@ -47,19 +47,19 @@
                         <form action="{{url_for('insert')}}" method="POST">
                           <div class="form-group">
                             <label>Test Case Name:</label>
-                            <input type="text" class="form-control" name="testcasename" required="1">
+                            <input type="text" class="form-control" name="Test_Case_Name" required="1">
                           </div>
                           <div class="form-group">
                             <label>Test Case:</label>
-                            <input type="text" class="form-control" name="testcase" required="1">
+                            <input type="text" class="form-control" name="Test_Case" required="1">
                           </div>
                           <div class="form-group">
                             <label>Source query:</label>
-                            <input type="text" class="form-control" name="sourcequery" required="1">
+                            <input type="text" class="form-control" name="Source_Query" required="1">
                           </div>
                           <div class="form-group">
                             <label>Target query:</label>
-                            <input type="text" class="form-control" name="targetquery" required="1">
+                            <input type="text" class="form-control" name="Target_Query" required="1">
                           </div>
                           <div class="form-group">
                             <button class="btn btn-primary" type="submit">Insert Data</button>
@@ -184,19 +184,19 @@
                     <div class="form-group">
                       <label>Test Case Name:</label>
                       <input type="hidden" name="id" value={{row.0}}>
-                      <input type="text" class="form-control" name="testcasename" value={{row.1}}>
+                      <input type="text" class="form-control" name="Test_Case_Name" value={{row.1}}>
                     </div>
                     <div class="form-group">
                       <label>Test Case:</label>
-                      <input type="text" class="form-control" name="testcase" value={{row.2}}>
+                      <input type="text" class="form-control" name="Test_Case" value={{row.2}}>
                     </div>
                     <div class="form-group">
                       <label>Source Query:</label>
-                      <input type="text" class="form-control" name="sourcequery" value={{row.3}}>
+                      <input type="text" class="form-control" name="Source_Query" value={{row.3}}>
                     </div>
                     <div class="form-group">
                       <label>Target Query:</label>
-                      <input type="text" class="form-control" name="targetquery" value={{row.3}}>
+                      <input type="text" class="form-control" name="Target_Query" value={{row.3}}>
                     </div>
                     <div class="form-group">
                       <button class="btn btn-primary" type="submit">Update Data</button>
