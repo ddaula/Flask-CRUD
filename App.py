@@ -16,7 +16,7 @@ def index():
     cur.execute("select * from students")
     data=cur.fetchall()
     cur.close()
-    return render_template('index.html',students=data)
+    return render_template('index_test.html',students=data)
 
 @app.route('/insert',methods=['POST'])
 def insert():

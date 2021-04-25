@@ -9,6 +9,13 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+tr {
+  display: block
+}
+td.break {
+  float: left;
+  line-height: 22px;
+}
 body {
   margin: 0;
 }
